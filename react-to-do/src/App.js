@@ -28,7 +28,7 @@ class App extends Component {
 
    handleDelete(index) {
       const todos = this.state.todos.slice();
-      const todoLeft = todos.filter(todos => todos[index]);
+      const todoLeft = todos.filter(todos => todos[index].isCompleted);
       this.setState({ todos: todoLeft});
     }
 
